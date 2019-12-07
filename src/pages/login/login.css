@@ -1,0 +1,24 @@
+.login__content {
+  width: 100%;
+  padding: 15%;
+  margin: auto;
+  background-color: #614EA6;
+  height: 100vh;
+}
+button.btn__login {
+  background-color: #fff;
+  color: #614EA6;
+}
+button.btn__login:hover {
+  background-color: #f21667;
+  color: #fff;
+}
+
+.opcoes__login a{
+  text-decoration: none;
+  color: #fff;
+  transition: .3s ease-in;
+}
+.opcoes__login a:hover{
+  color: #f21667;
+}
