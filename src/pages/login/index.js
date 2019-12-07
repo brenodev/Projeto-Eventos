@@ -1,18 +1,23 @@
 import React, { useState } from "react";
 import "./login.css";
 import firebase from "../../configs/firebase";
-import 'firebase/auth'
+import "firebase/auth";
 
 export default function Login() {
   const [email, setEmail] = useState();
   const [senha, setSenha] = useState();
+  const [alert, setAlert] = useState();
 
   function logar() {
-    firebase.auth().signInWithEmailAndPassword(email, senha).then(resultado => {
-      alert("usuario logado")
-    }).catch(erro => {
-      alert(erro)
-    })
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, senha)
+      .then(resultado => {
+        setAlert("sucesso");
+      })
+      .catch(erro => {
+        setAlert("erro");
+      });
   }
 
   return (
@@ -31,7 +36,7 @@ export default function Login() {
           </h1>
         </div>
         <input
-          onChange={(e)=> setEmail(e.target.value)}
+          onChange={e => setEmail(e.target.value)}
           type="email"
           id="inputEmail"
           className="form-control my-2"
@@ -39,26 +44,33 @@ export default function Login() {
           required
         />
         <input
-          onChange={(e) => setSenha(e.target.value)}
+          onChange={e => setSenha(e.target.value)}
           type="password"
           id="inputPassword"
           className="form-control my-2"
           placeholder="Senha"
           required
         />
-        <button onClick={logar} className="btn btn-lg btn-block btn__login" type="button">
+        <button
+          onClick={logar}
+          className="btn btn-lg btn-block btn__login"
+          type="button"
+        >
           Entrar
         </button>
         <div className="msg__login text-white text-center my-5">
-          <span>
-            <strong>WoW! </strong>
-            Você está conectado! &#128526;
-          </span>
-          <br/>
-          <span>
-            <strong>Ops! </strong>
-            Verifique se a senha ou usuário estão corretos! &#128546;
-          </span>
+          {alert === "sucesso" && (
+            <span>
+              <strong>WoW! </strong>
+              Você está conectado! &#128526;
+            </span>
+          )}
+          {alert === "erro" && (
+            <span>
+              <strong>Ops! </strong>
+              Verifique se a senha ou usuário estão corretos! &#128546;
+            </span>
+          )}
         </div>
         <div className="opcoes__login mt-5 text-center">
           <a href="#" className="mx-2">
