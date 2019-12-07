@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./login.css";
+import firebase from "../../configs/firebase";
+import 'firebase/auth'
 
 export default function Login() {
+  const [email, setEmail] = useState();
+  const [senha, setSenha] = useState();
+
+  function logar() {
+    firebase.auth().signInWithEmailAndPassword(email, senha).then(resultado => {
+      alert("usuario logado")
+    }).catch(erro => {
+      alert(erro)
+    })
+  }
+
   return (
     <div className="login__content d-flex align-items-center">
       <form className="form-signin mx-auto">
@@ -18,6 +31,7 @@ export default function Login() {
           </h1>
         </div>
         <input
+          onChange={(e)=> setEmail(e.target.value)}
           type="email"
           id="inputEmail"
           className="form-control my-2"
@@ -25,13 +39,14 @@ export default function Login() {
           required
         />
         <input
+          onChange={(e) => setSenha(e.target.value)}
           type="password"
           id="inputPassword"
           className="form-control my-2"
           placeholder="Senha"
           required
         />
-        <button className="btn btn-lg btn-block btn__login" type="submit">
+        <button onClick={logar} className="btn btn-lg btn-block btn__login" type="button">
           Entrar
         </button>
         <div className="msg__login text-white text-center my-5">
