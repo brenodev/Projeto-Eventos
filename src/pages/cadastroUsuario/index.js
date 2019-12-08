@@ -80,7 +80,7 @@ export default function CadastroUsuario() {
           </button>
         )}
 
-        <div classNameName="msg__login text-black text-center my-5">
+        <div className="msg__login text-black text-center my-5">
           {alertTipo === "sucesso" && (
             <span>
               <strong>WoW! </strong>

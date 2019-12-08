@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import {Link} from "react-router-dom"
+
 import "./login.css";
 import firebase from "../../configs/firebase";
 import "firebase/auth";
@@ -73,9 +75,9 @@ export default function Login() {
           )}
         </div>
         <div className="opcoes__login mt-5 text-center">
-          <a href="#" className="mx-2">
+          <Link to="cadastrar-usuario" className="mx-2">
             Quero cadastrar
-          </a>
+          </Link>
           <span className="text-white">&#9733;</span>
           <a href="#" className="mx-2">
             Recuperar senha

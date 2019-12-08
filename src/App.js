@@ -1,12 +1,10 @@
 import React from "react";
-// import Login from "./pages/login";
-import CadastroUsuario from "./pages/cadastroUsuario";
+import Routes from "./routes"
 
 function App() {
   return (
     <div>
-      {/* <Login /> */}
-      <CadastroUsuario />
+      <Routes />
     </div>
   );
 }
