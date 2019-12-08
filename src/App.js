@@ -1,9 +1,13 @@
-import React from 'react';
-import Login from "./pages/login"
+import React from "react";
+// import Login from "./pages/login";
+import CadastroUsuario from "./pages/cadastroUsuario";
 
 function App() {
   return (
-    <Login />
+    <div>
+      {/* <Login /> */}
+      <CadastroUsuario />
+    </div>
   );
 }
 
