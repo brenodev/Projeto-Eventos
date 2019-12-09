@@ -1,11 +1,13 @@
 import React from 'react'
 import "./home.css"
 import {Navbar} from "../../components"
+import {useSelector} from "react-redux"
 
 export default function Home() {
   return (
-    <h1>
+    <>
       <Navbar />
-    </h1>
+  <h1>{useSelector(state => state.usuarioEmail)}</h1>
+    </>  
   )
 }
