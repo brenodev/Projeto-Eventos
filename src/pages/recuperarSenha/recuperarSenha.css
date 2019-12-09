@@ -1,0 +1,8 @@
+button.btn__enviar {
+  background-color: #614EA6;
+  color: #fff;
+}
+button.btn__enviar:hover {
+  background-color: #f21667;
+  color: #fff;
+}

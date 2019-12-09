@@ -44,6 +44,7 @@ export default function Login() {
             width="72"
             height="72"
           />
+          <i className="far fa-smile-wink text-white fa-5x"></i>
           <h1 className="h3 mb-3 font-weight-normal text-white font-weight-bold">
             Login
           </h1>
@@ -86,7 +87,7 @@ export default function Login() {
           )}
         </div>
         <div className="opcoes__login mt-5 text-center">
-          <Link to="" className="mx-2">
+          <Link to="/recuperar-senha" className="mx-2">
             Recuperar senha
           </Link>
           <span className="text-white">&#9733;</span>

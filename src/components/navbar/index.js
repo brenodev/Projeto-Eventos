@@ -5,11 +5,11 @@ import { useSelector, useDispatch } from "react-redux";
 
 export default function Navbar() {
   const dispatch = useDispatch();
-  
+
   return (
     <nav className="navbar navbar-expand-lg">
       <Link to="/" className="navbar-brand text-white font-weight-bold">
-        Eventos
+        <i className="far fa-smile-wink text-white fa-2x"></i>
       </Link>
       <button
         className="navbar-toggler"
@@ -24,7 +24,7 @@ export default function Navbar() {
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
-          <li className="nav-item">
+          <li className="nav-item ml-2">
             <Link to="/" className="nav-link">
               Home
             </Link>
