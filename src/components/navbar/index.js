@@ -1,14 +1,14 @@
 import React from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function Navbar() {
+  const dispatch = useDispatch();
+  
   return (
     <nav className="navbar navbar-expand-lg">
-      <Link
-        to="/"
-        className="navbar-brand text-white font-weight-bold"
-      >
+      <Link to="/" className="navbar-brand text-white font-weight-bold">
         Eventos
       </Link>
       <button
@@ -29,16 +29,46 @@ export default function Navbar() {
               Home
             </Link>
           </li>
-          <li className="nav-item">
-            <Link to="/cadastrar-usuario" className="nav-link">
-              Cadastrar
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/login" className="nav-link">
-              Login
-            </Link>
-          </li>
+          {useSelector(state => state.usuarioLogado) === true ? (
+            <>
+              <li className="nav-item">
+                <Link to="" className="nav-link">
+                  Publicar Evento
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="" className="nav-link">
+                  Meus Eventos
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  to=""
+                  className="nav-link"
+                  onClick={() =>
+                    dispatch({
+                      type: "LOG_OUT"
+                    })
+                  }
+                >
+                  Sair
+                </Link>
+              </li>
+            </>
+          ) : (
+            <>
+              <li className="nav-item">
+                <Link to="/cadastrar-usuario" className="nav-link">
+                  Cadastrar
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/login" className="nav-link">
+                  Login
+                </Link>
+              </li>
+            </>
+          )}
         </ul>
       </div>
     </nav>
