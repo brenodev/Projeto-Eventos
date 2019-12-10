@@ -32,7 +32,7 @@ export default function Navbar() {
           {useSelector(state => state.usuarioLogado) === true ? (
             <>
               <li className="nav-item ml-2">
-                <Link to="" className="nav-link">
+                <Link to="/cadastrar-evento" className="nav-link">
                   Publicar Evento
                 </Link>
               </li>

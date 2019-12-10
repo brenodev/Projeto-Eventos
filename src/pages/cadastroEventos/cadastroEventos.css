@@ -1,0 +1,8 @@
+button.btn__cadastro {
+  background-color: #614EA6;
+  color: #fff;
+}
+button.btn__cadastro:hover {
+  background-color: #F21667;
+  color: #fff;
+}
