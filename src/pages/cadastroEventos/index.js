@@ -81,7 +81,7 @@ export default function CadastroEvento() {
               id="tipoEvento"
               onChange={e => setTipo(e.target.value)}
             >
-              <option value="" disabled selected value>
+              <option value="" disabled selected defaultValue="">
                 Selecione um evento
               </option>
               <option value="festaShow">Festa e Show</option>
