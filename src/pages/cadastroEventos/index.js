@@ -40,7 +40,7 @@ export default function CadastroEvento() {
             hora: hora,
             usuario: usuarioEmail,
             foto: foto.name,
-            visualizacoes: false,
+            visualizacoes: 0,
             publico: true,
             criacao: new Date()
           })
