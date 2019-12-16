@@ -9,7 +9,7 @@ export default function Card({id, key, img, titulo, detalhes, visualizacoes}) {
 
   useEffect(() => {
     firebase.storage().ref(`imagens/${img}`).getDownloadURL().then(url => setUrlImg(url))
-  },)
+  },[img, urlImg])
 
   return (
     <div className="col-md-3 col-sm-12">
