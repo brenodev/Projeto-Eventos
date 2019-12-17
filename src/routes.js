@@ -20,7 +20,7 @@ export default function Routes() {
           <Route path="/login" component={Login} />
           <Route path="/recuperar-senha" component={RecuperarSenha} />
           <Route path="/cadastrar-evento" component={CadastroEvento} />
-          <Route path="/detalhes-evento" component={DetalhesEvento} />
+          <Route path="/detalhes-evento/:id" component={DetalhesEvento} />
         </Switch>
       </React.Fragment>
     </BrowserRouter>

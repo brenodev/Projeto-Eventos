@@ -84,15 +84,15 @@ export default function CadastroEvento() {
               <option value="" disabled selected defaultValue="">
                 Selecione um evento
               </option>
-              <option value="festaShow">Festa e Show</option>
-              <option value="festaShow">Curso e Workshop</option>
-              <option value="festaShow">Arte e Cultura</option>
-              <option value="festaShow">Esportivo</option>
-              <option value="festaShow">Saúde e Bem estar</option>
-              <option value="festaShow">Congresso e Seminário</option>
-              <option value="festaShow">Gatronômico</option>
-              <option value="festaShow">Encontro e Network</option>
-              <option value="festaShow">Religioso</option>
+              <option value="Festa e Show">Festa e Show</option>
+              <option value="Curso e Workshop">Curso e Workshop</option>
+              <option value="Arte e Cultura">Arte e Cultura</option>
+              <option value="Esportivo">Esportivo</option>
+              <option value="Saúde e Bem estar">Saúde e Bem estar</option>
+              <option value="Congresso e Seminário">Congresso e Seminário</option>
+              <option value="Gatronômico">Gatronômico</option>
+              <option value="Encontro e Network">Encontro e Network</option>
+              <option value="Religioso">Religioso</option>
             </select>
           </div>
           <div className="form-group">

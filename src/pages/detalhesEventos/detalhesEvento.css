@@ -3,6 +3,14 @@
   min-height: 300px;
   max-height: 350px;
 }
+.titulo {
+  color: #614ea6;
+  text-transform: uppercase;
+  border-bottom:2px solid #614ea6 ;
+}
+.visualizacoes{
+  color: #614ea6;
+}
 .box__info {
   background-color: #614ea6;  
   color: #fff;
