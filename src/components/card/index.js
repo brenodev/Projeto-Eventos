@@ -25,7 +25,7 @@ export default function Card({id, key, img, titulo, detalhes, visualizacoes}) {
         </p>
         <div className="row rodape__card d-flex align-items-center">
           <div className="col-6">
-            <Link to={"/evento-detalhes/" + id} className="btn btn-sm btn__detalhes">
+            <Link to={"/detalhes-evento" + id} className="btn btn-sm btn__detalhes">
               + detalhes
             </Link>
           </div>

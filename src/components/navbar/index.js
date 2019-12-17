@@ -37,7 +37,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li className="nav-item ml-2">
-                <Link to="eventos/meus" className="nav-link">
+                <Link to="/eventos/meus" className="nav-link">
                   Meus Eventos
                 </Link>
               </li>
